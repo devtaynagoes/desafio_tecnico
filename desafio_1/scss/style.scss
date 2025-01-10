@@ -1,0 +1,77 @@
+$primary-color: #4caf50;
+$hover-color: #45a049;
+$background-color: #f4f4f9;
+$container-bg: #ffffff;
+$font-color-primary: #333;
+$font-color-secondary: #666;
+$font-family: Arial, sans-serif;
+$border-radius: 8px;
+$box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+$max-width: 400px;
+$font-size-base: 16px;
+$font-size-heading: 24px;
+$font-size-small: 12px;
+$font-size-result: 18px;
+$font-size-iterations: 14px;
+$button-padding: 10px 20px;
+
+@mixin border-radius($radius) {
+    border-radius: $radius;
+}
+
+body {
+    font-family: $font-family;
+    margin: 0;
+    padding: 0;
+    background-color: $background-color;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    background-color: $container-bg;
+    padding: 20px;
+    text-align: center;
+    max-width: $max-width;
+    width: 100%;
+    @include border-radius($border-radius);
+    box-shadow: $box-shadow;
+}
+
+h1 {
+    font-size: $font-size-heading;
+    color: $font-color-primary;
+    margin-bottom: 20px;
+}
+
+button {
+    padding: $button-padding;
+    font-size: $font-size-base;
+    color: #fff;
+    background-color: $primary-color;
+    border: none;
+    cursor: pointer;
+    @include border-radius(5px);
+    transition: background-color 0.3s;
+
+    &:hover {
+        background-color: $hover-color;
+    }
+}
+span {
+    color: $font-color-primary;
+    font-size: $font-size-small;
+    text-align: justify;
+}
+.result {
+    font-size: $font-size-result;
+    margin-top: 20px;
+    font-weight: bold;
+}
+.iterations {
+    font-size: $font-size-iterations;
+    margin-top: 10px;
+    color: $font-color-secondary;
+}
