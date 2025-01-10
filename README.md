@@ -1,4 +1,7 @@
+OBS: ESTE DESAFIO AINDA NAO ESTA FINALIZADOO!!!!!!
 ###### DESAFIO TÉCNICO ########## 🚀
+
+
 Este repositório contém desafios técnicos.
 
 ## CONTATO 📞
