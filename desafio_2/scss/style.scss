@@ -1,0 +1,93 @@
+/* Variáveis para cores e fontes */
+$primary-color: #4CAF50;
+$hover-color: #45a049;
+$background-color: #f4f4f4;
+$text-color: #333;
+$light-text-color: #555;
+$container-bg-color: #fff;
+$input-border-color: #ddd;
+$input-focus-border-color: $primary-color;
+$result-bg-color: #f9f9f9;
+$error-color: #e74c3c;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: $background-color;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: $text-color;
+}
+
+.container {
+    background-color: $container-bg-color;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 400px;
+    width: 100%;
+
+    h1 {
+        font-size: 24px;
+        margin-bottom: 20px;
+        color: $primary-color;
+    }
+
+    input[type="number"] {
+        width: 100%;
+        padding: 10px;
+        font-size: 16px;
+        border: 2px solid $input-border-color;
+        border-radius: 4px;
+        margin-bottom: 20px;
+        outline: none;
+        transition: border-color 0.3s;
+
+        &:focus {
+            border-color: $input-focus-border-color;
+        }
+    }
+
+    button {
+        width: 100%;
+        padding: 12px;
+        font-size: 16px;
+        background-color: $primary-color;
+        color: #fff;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+
+        &:hover {
+            background-color: $hover-color;
+        }
+    }
+
+    #result {
+        margin-top: 20px;
+        padding: 10px;
+        font-size: 18px;
+        border: 1px solid $input-border-color;
+        border-radius: 4px;
+        background-color: $result-bg-color;
+        min-height: 50px;
+        color: $light-text-color;
+
+        &.success {
+            color: $primary-color;
+        }
+
+        &.error {
+            color: $error-color;
+        }
+    }
+}
