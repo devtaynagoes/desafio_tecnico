@@ -2,12 +2,12 @@ $bg-color: #f4f4f9;
 $color-white: #fff;
 $text-color: #333;
 $border-color: #ccc;
-$success-background: #dff0d8;
-$success-text-color: #3c763d;
+$success-background: #f3e6ff;
+$success-text-color: #7b37c0;
 $error-background: #f2dede;
 $error-text-color: #a94442;
-$button-color: #4caf50;
-$button-hover-color: #45a049;
+$button-color: #7b37c0;
+$button-hover-color: #9a4fcf;
 $button-text-color: #fff;
 
 body {
@@ -72,6 +72,7 @@ button {
         background-color: $button-hover-color;
     }
 }
+
 .alert {
     padding: 10px;
     margin-bottom: 20px;

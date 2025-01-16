@@ -1,5 +1,5 @@
-$primary-color: #4caf50;
-$hover-color: #45a049;
+$primary-color: #7b37c0;
+$hover-color: #9a4fcf;
 $background-color: #f4f4f9;
 $container-bg: #ffffff;
 $font-color-primary: #333;
@@ -60,16 +60,19 @@ button {
         background-color: $hover-color;
     }
 }
+
 span {
     color: $font-color-primary;
     font-size: $font-size-small;
     text-align: justify;
 }
+
 .result {
     font-size: $font-size-result;
     margin-top: 20px;
     font-weight: bold;
 }
+
 .iterations {
     font-size: $font-size-iterations;
     margin-top: 10px;
