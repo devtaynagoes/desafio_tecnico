@@ -1,0 +1,91 @@
+// Variáveis de cores
+$cor-fundo: #f4f4f4;
+$cor-texto: #333;
+$cor-destaque: #4caf50;
+$cor-sucesso-bg: #d4edda;
+$cor-sucesso-texto: #155724;
+$cor-erro-bg: #f8d7da;
+$cor-erro-texto: #721c24;
+$cor-fundo-claro: #fff;
+$cor-cinza: #777;
+$cor-verde-escuro: #4caf50;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Arial", sans-serif;
+    background-color: $cor-fundo;
+    color: $cor-texto;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+h1 {
+    text-align: center;
+    color: $cor-destaque;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.container {
+    background-color: $cor-fundo-claro;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px;
+}
+
+p {
+    font-size: 18px;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #555;
+}
+
+span {
+    font-size: 18px;
+    color: $cor-texto;
+    font-weight: normal;
+}
+
+#menor,
+#maior,
+#diasAcimaMedia {
+    font-size: 20px;
+    color: $cor-destaque;
+    font-weight: bold;
+}
+
+footer {
+    margin-top: 30px;
+    text-align: center;
+    font-size: 14px;
+    color: $cor-cinza;
+}
+
+.alert {
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.alert.success {
+    background-color: $cor-sucesso-bg;
+    color: $cor-sucesso-texto;
+}
+
+.alert.error {
+    background-color: $cor-erro-bg;
+    color: $cor-erro-texto;
+}

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Tayná Goes" />
+    <meta http-equiv="Content-Language" content="en" />
+    <meta name="date" content="15-01-2025" scheme="DD-MM-YYYY" />
+    <title>Desafio 3 - Faturamento Mensal</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <div>
+        <h1>Faturamento Mensal</h1>
+        <p><strong>Menor faturamento:</strong> <span id="menor"></span></p>
+        <p><strong>Maior faturamento:</strong> <span id="maior"></span></p>
+        <p><strong>Número de dias com faturamento acima da média:</strong> <span id="diasAcimaMedia"></span></p>
+    </div>
+
+    <script>
+        $(document).ready(function() {
+            $.getJSON('./dados.json', function(dados) {
+                const valoresFaturamento = dados.filter(dado => dado.valor > 0).map(dado => dado.valor);
+
+                if (!valoresFaturamento.length) {
+                    $('#menor, #maior, #diasAcimaMedia').text('Não há faturamento válido.');
+                    return;
+                }
+
+                const menor = Math.min(...valoresFaturamento);
+                const maior = Math.max(...valoresFaturamento);
+                const media = valoresFaturamento.reduce((soma, valor) => soma + valor, 0) / valoresFaturamento.length;
+                const diasAcimaDaMedia = dados.filter(dado => dado.valor > media).length;
+
+                const formatarValor = valor => `R$ ${valor.toLocaleString('pt-BR', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`;
+
+                $('#menor').text(formatarValor(menor));
+                $('#maior').text(formatarValor(maior));
+                $('#diasAcimaMedia').text(diasAcimaDaMedia);
+            });
+        });
+    </script>
+</body>
+</html>
